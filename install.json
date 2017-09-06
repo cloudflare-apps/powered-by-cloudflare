@@ -1,0 +1,59 @@
+{
+  "resources": {
+    "body": [
+      {
+        "type": "style",
+        "src": "./build/app.css"
+      },
+      {
+        "type": "script",
+        "src": "./build/app.js"
+      }
+    ]
+  },
+  "preview": {
+    "handlers": [
+      {
+        "options": ["_default"],
+        "execute": "INSTALL_SCOPE.setOptions(INSTALL_OPTIONS)"
+      }
+    ]
+  },
+  "options": {
+    "properties": {
+      "location": {
+        "title": "Button Location",
+        "description": "Where should the button appear?",
+        "order": 0,
+        "type": "object",
+        "format": "element",
+        "default": {
+          "selector": "body",
+          "method": "prepend"
+        }
+      },
+      "theme": {
+        "order": 2,
+        "title": "Theme",
+        "format": "radios",
+        "type": "string",
+        "default": "dark",
+        "enum": [
+          "dark",
+          "light",
+          "blue",
+          "lightBlue",
+          "indigo",
+        ],
+        "enumNames": {
+          "light": "Light",
+          "dark": "Dark",
+          "blue": "Blue",
+          "green": "Green",
+          "indigo": "Indigo",
+          "lightBlue": "Light Blue"
+        }
+      }
+    }
+  }
+}
